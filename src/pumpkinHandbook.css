@@ -1,0 +1,279 @@
+.handbook-page {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: radial-gradient(circle at 10% 15%, rgba(255, 215, 180, 0.35), transparent 35%), radial-gradient(circle at 90% 10%, rgba(255, 224, 221, 0.4), transparent 30%), linear-gradient(180deg, #fff7f0 0%, #fff2e7 45%, #fde6d6 100%);
+  color: #24151a;
+}
+
+.handbook-hero {
+  position: relative;
+  background: linear-gradient(120deg, #ffe2c9, #ffd2b4, #ffecda);
+  padding: 28px 24px;
+  border-radius: 24px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.handbook-hero .sparkles {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.7) 0, transparent 30%), radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.6) 0, transparent 35%), radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.5) 0, transparent 40%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.handbook-hero h1 {
+  margin: 8px 0 4px;
+  font-size: 34px;
+  letter-spacing: -0.03em;
+}
+
+.handbook-hero .lede {
+  margin: 0 0 12px;
+  max-width: 640px;
+  color: #4a2f31;
+  line-height: 1.5;
+}
+
+.hero-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.select-wrap label {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6f5043;
+}
+
+.select-wrap select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff7f0;
+  font-weight: 600;
+  color: #321b1c;
+}
+
+.page-steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 14px;
+  padding: 8px 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.page-steps button {
+  background: linear-gradient(135deg, #ffbe9c, #ff8c73);
+  border: none;
+  color: #2d1416;
+  font-weight: 700;
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255, 140, 115, 0.3);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.page-steps button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(255, 140, 115, 0.4);
+}
+
+.page-indicator {
+  font-weight: 700;
+  color: #4c2b2b;
+}
+
+.book-stage {
+  margin-top: 26px;
+  background: linear-gradient(160deg, rgba(255, 235, 219, 0.9), rgba(255, 214, 190, 0.9));
+  border-radius: 28px;
+  padding: 26px 18px 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 28px 60px rgba(0, 0, 0, 0.08);
+}
+
+.book {
+  perspective: 1400px;
+  display: grid;
+  place-items: center;
+}
+
+.page-card {
+  width: min(760px, 100%);
+  background: #fffaf5;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transform-origin: left center;
+  animation: flipNext 0.6s ease;
+  position: relative;
+}
+
+.page-card.flip-prev {
+  transform-origin: right center;
+  animation: flipPrev 0.6s ease;
+}
+
+.page-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.chapter-pill {
+  background: rgba(255, 204, 177, 0.7);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #2c1a1a;
+}
+
+.page-number {
+  color: #7b5b4c;
+  font-weight: 700;
+}
+
+.page-card h3 {
+  margin: 12px 0 10px;
+  font-size: 26px;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.rule-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.06);
+}
+
+.rule-number {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 205, 175, 0.7);
+  font-weight: 800;
+  color: #2c1416;
+  margin-bottom: 6px;
+}
+
+.rule-card p {
+  margin: 0;
+  color: #2a1616;
+  line-height: 1.45;
+}
+
+.canon-footnote {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(255, 223, 205, 0.5);
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.canon-footnote .quote {
+  margin: 4px 0;
+  font-weight: 700;
+  color: #3b1f1f;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6d4a3f;
+  margin: 0;
+}
+
+.book-shadow {
+  height: 14px;
+  width: min(720px, 95%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  margin: 12px auto 0;
+  filter: blur(6px);
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.page-nav button {
+  background: linear-gradient(135deg, #ffbfa3, #ff8c73);
+  border: none;
+  color: #2c1616;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(255, 132, 105, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.page-nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(255, 132, 105, 0.45);
+}
+
+@keyframes flipNext {
+  from {
+    transform: rotateY(-14deg) translateZ(0);
+    opacity: 0.6;
+  }
+  to {
+    transform: rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flipPrev {
+  from {
+    transform: rotateY(14deg) translateZ(0);
+    opacity: 0.6;
+  }
+  to {
+    transform: rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .handbook-page {
+    padding-top: 130px;
+  }
+
+  .handbook-hero h1 {
+    font-size: 26px;
+  }
+
+  .rules {
+    grid-template-columns: 1fr;
+  }
+}
