@@ -20,7 +20,6 @@ import Img11 from './img/pic11.jpg';
 import Img12 from './img/pic12.JPG';
 import Img13 from './img/pic13.jpg';
 import Img14 from './img/pic14.jpg';
-import Img15 from './img/pic15.HEIC';
 import Img16 from './img/pic16.jpg';
 import Img17 from './img/pic17.jpg';
 import Img19 from './img/pic19.jpg';
